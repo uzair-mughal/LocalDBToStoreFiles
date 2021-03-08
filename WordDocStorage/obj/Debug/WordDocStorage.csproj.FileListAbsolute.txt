@@ -1,0 +1,10 @@
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\bin\Debug\WordDocStorage.exe.config
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\bin\Debug\WordDocStorage.exe
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\bin\Debug\WordDocStorage.pdb
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\obj\Debug\WordDocStorage.csprojAssemblyReference.cache
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\obj\Debug\WordDocStorage.Form1.resources
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\obj\Debug\WordDocStorage.Properties.Resources.resources
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\obj\Debug\WordDocStorage.csproj.GenerateResource.cache
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\obj\Debug\WordDocStorage.csproj.CoreCompileInputs.cache
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\obj\Debug\WordDocStorage.exe
+D:\Free Lancing\Fiverr\tnwitua\WordDocStorage\WordDocStorage\obj\Debug\WordDocStorage.pdb

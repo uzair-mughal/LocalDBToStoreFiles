@@ -1,0 +1,135 @@
+1).
+CMD:	ipconfig
+192.168.43.224
+======================================================================
+2).
+CMD:	ipconfig/all
+IPv4 Address. . . . . . . . . . . : 192.168.43.224(Preferred)
+Physical Address. . . . . . . . . : CC-B0-DA-3C-A1-F9
+DHCP Enabled. . . . . . . . . . . : Yes
+======================================================================
+3).
+CMD:	hostname
+Venom
+======================================================================
+4).
+CMD:	ping <IP ADDRESS>
+======================================================================
+5).
+CMD:	getmac
+CC-B0-DA-3C-A1-F9
+======================================================================
+6).
+CMD:	net share
+Share name   Resource                        Remark
+
+-------------------------------------------------------------------------------
+C$           C:\                             Default share
+D$           D:\                             Default share
+E$           E:\                             Default share
+F$           F:\                             Default share
+IPC$                                         Remote IPC
+Z$           Z:\                             Default share
+ADMIN$       C:\Windows                      Remote Admin
+The command completed successfully.
+======================================================================
+7).
+--first we find PIDs of chorme application.
+CMD:	tasklist | findstr chrome.exe
+chrome.exe                    8784 Console                    1    202,584 K
+chrome.exe                     564 Console                    1      7,244 K
+chrome.exe                   13616 Console                    1    195,476 K
+chrome.exe                    2480 Console                    1     51,928 K
+chrome.exe                   14708 Console                    1     16,652 K
+chrome.exe                   13204 Console                    1     59,208 K
+chrome.exe                    9428 Console                    1     85,748 K
+chrome.exe                   12432 Console                    1     50,224 K
+chrome.exe                   12460 Console                    1     18,832 K
+chrome.exe                   11276 Console                    1     50,412 K
+chrome.exe                   15256 Console                    1    195,900 K
+chrome.exe                    8304 Console                    1    130,116 K
+chrome.exe                    3396 Console                    1     39,008 K
+chrome.exe                   10304 Console                    1     63,700 K
+chrome.exe                   14588 Console                    1     79,236 K
+chrome.exe                   14332 Console                    1     53,324 K
+chrome.exe                    8932 Console                    1    215,500 K
+chrome.exe                   11396 Console                    1     67,324 K
+chrome.exe                   13900 Console                    1     71,216 K
+chrome.exe                    7344 Console                    1     23,348 K
+
+
+--second we find ports which are connect to application
+CMD:	netstat -aon | findstr 2480
+  TCP    127.0.0.1:53105        127.0.0.1:49671        ESTABLISHED     2480
+  TCP    192.168.43.224:50554   104.18.169.19:443      ESTABLISHED     2480
+  TCP    192.168.43.224:50555   151.101.0.134:443      ESTABLISHED     2480
+  TCP    192.168.43.224:50556   151.101.0.134:443      ESTABLISHED     2480
+  TCP    192.168.43.224:50557   104.18.169.19:443      ESTABLISHED     2480
+  TCP    192.168.43.224:50559   151.101.26.49:443      ESTABLISHED     2480
+  TCP    192.168.43.224:50567   151.101.40.134:443     ESTABLISHED     2480
+  TCP    192.168.43.224:50571   172.217.21.46:443      ESTABLISHED     2480
+  TCP    192.168.43.224:50576   216.58.207.106:443     ESTABLISHED     2480
+  TCP    192.168.43.224:50577   172.217.19.165:443     ESTABLISHED     2480
+  TCP    192.168.43.224:50579   35.211.41.247:443      ESTABLISHED     2480
+  TCP    192.168.43.224:50584   216.58.207.3:443       ESTABLISHED     2480
+  TCP    192.168.43.224:53495   198.252.206.25:443     ESTABLISHED     2480
+  TCP    192.168.43.224:53563   74.125.140.188:5228    ESTABLISHED     2480
+  TCP    192.168.43.224:53739   198.252.206.25:443     ESTABLISHED     2480
+  TCP    192.168.43.224:53813   172.217.21.46:443      ESTABLISHED     2480
+  TCP    192.168.43.224:53835   216.58.207.99:443      ESTABLISHED     2480
+  TCP    192.168.43.224:54242   172.67.210.6:443       ESTABLISHED     2480
+  TCP    192.168.43.224:54247   151.101.40.134:443     ESTABLISHED     2480
+  UDP    0.0.0.0:5353           *:*                                    2480
+  UDP    0.0.0.0:5353           *:*                                    2480
+  UDP    0.0.0.0:50650          *:*                                    2480
+  UDP    0.0.0.0:51177          *:*                                    2480
+  UDP    0.0.0.0:51179          *:*                                    2480
+  UDP    0.0.0.0:54966          *:*                                    2480
+  UDP    0.0.0.0:63053          *:*                                    2480
+  UDP    [::]:5353              *:*                                    2480
+======================================================================
+8).
+CMD:	arp -a
+Interface: 192.168.43.224 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.43.1          a0-10-81-fc-80-84     dynamic
+  192.168.43.106        c4-fe-5b-ed-6d-85     dynamic
+  192.168.43.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.18            01-00-5e-00-00-12     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+======================================================================
+9).
+CMD:	ipconfig
+Default Gateway . . . . . . . . . : 192.168.43.1
+======================================================================
+10).
+CMD:	tracert www.google.com.my
+Tracing route to www.google.com.my [216.58.207.99]
+over a maximum of 30 hops:
+
+  1     2 ms     1 ms     2 ms  192.168.43.1
+  2     *        *        *     Request timed out.
+  3    26 ms    44 ms    28 ms  10.81.73.133
+  4    35 ms    43 ms    26 ms  10.81.178.9
+  5   131 ms    51 ms    23 ms  10.180.76.17
+  6   180 ms    97 ms    97 ms  10.81.74.6
+  7    94 ms    99 ms    99 ms  116.71.129.225
+  8   107 ms   100 ms   100 ms  10.253.4.44
+  9    93 ms    97 ms    28 ms  10.253.4.8
+ 10   231 ms   100 ms   102 ms  74.125.118.170
+ 11   223 ms    78 ms   125 ms  172.253.51.205
+ 12   211 ms    52 ms    45 ms  216.239.62.191
+ 13    48 ms    42 ms    42 ms  fjr02s04-in-f3.1e100.net [216.58.207.99]
+
+Trace complete.
+
+IP : [216.58.297.99]
+HOPS: 13
+======================================================================
+11).
+might be caused by antivirus or firewall
+======================================================================
